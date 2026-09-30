@@ -3,20 +3,173 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MangaSpace: Manga Tracker</title>
-  <meta name="description" content="Collect, track, and read manga. Your whole collection in one place.">
-  <link rel="stylesheet" href="style.css">
+  <title>MangaSpace: Manga Tracker · Collect, Track & Read Manga</title>
+  <meta name="description" content="Your whole manga universe in one place. Track every volume you own, read chapters, get alerts for new releases, and share reviews with other readers.">
+  <meta property="og:title" content="MangaSpace: Manga Tracker">
+  <meta property="og:description" content="Collect, track, and read manga. Your whole collection in one place.">
+  <meta property="og:image" content="https://mangaspaceapp.com/screens/library.jpg">
+  <meta name="apple-itunes-app" content="app-id=6817181804">
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="stylesheet" href="landing.css">
 </head>
 <body>
-  <header>
-    <img src="icon.png" alt="MangaSpace app icon">
-    <h1>MangaSpace</h1>
-    <p>Collect, Track &amp; Read Manga</p>
-    <nav><a href="support.html">Support</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a></nav>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true"></div>
+
+  <header class="site">
+    <a class="brand" href="#top"><img src="icon.png" alt="">MangaSpace</a>
+    <nav class="links">
+      <a href="#features">Features</a>
+      <a href="#gallery">Screenshots</a>
+      <a href="support.html">Support</a>
+    </nav>
   </header>
-  <main>
-    <p>MangaSpace keeps your whole manga collection in one place. Track the volumes you own and read, read chapters right in the app, get alerts for new chapters and English volume releases, and share reviews and discussions with other readers.</p>
+
+  <main id="top">
+    <div class="hero">
+      <div class="reveal shown">
+        <span class="eyebrow">Your manga universe</span>
+        <h1>Every volume.<br><span class="grad">One place.</span></h1>
+        <p class="lead">Track the manga you own and read, pick up chapters right where you left off, never miss a release, and share what you love with readers everywhere.</p>
+        <div class="cta">
+          <a href="https://apps.apple.com/app/id6817181804" aria-label="Download on the App Store">
+            <img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store" style="height:54px">
+          </a>
+          <a class="ghost" href="#features">See what it does</a>
+        </div>
+        <p class="soon">Coming soon for iPhone.</p>
+      </div>
+      <div class="stage reveal shown" aria-hidden="true">
+        <div class="glow"></div>
+        <div class="fan">
+          <div class="phone"><img src="screens/galaxy.jpg" alt=""></div>
+          <div class="phone"><img src="screens/library.jpg" alt=""></div>
+          <div class="phone"><img src="screens/series.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="features">
+      <div class="section-title reveal">
+        <span class="eyebrow">Built for collectors</span>
+        <h2>Everything your shelf needs.</h2>
+        <p>From the first volume to the latest chapter, MangaSpace keeps your collection organized and your next read one tap away.</p>
+      </div>
+
+      <div class="feature">
+        <div class="copy reveal">
+          <span class="icon-chip">📚</span>
+          <h3>A library that organizes itself</h3>
+          <p>Smart shelves sort your collection for you, from unread volumes to upcoming releases, with beautiful covers for every book.</p>
+          <ul>
+            <li>Track every volume you own and read</li>
+            <li>Unread volumes, favorites, and series to finish collecting</li>
+            <li>Syncs across your devices with iCloud</li>
+          </ul>
+        </div>
+        <div class="shot reveal delay-2"><div class="phone"><img src="screens/library.jpg" alt="The MangaSpace library with shelves of manga covers"></div></div>
+      </div>
+
+      <div class="feature" style="--tint: rgba(224,51,140,.32)">
+        <div class="copy reveal">
+          <span class="icon-chip">📖</span>
+          <h3>Read right in the app</h3>
+          <p>Open chapters from MangaDex or import your own files, with a reader made for manga: right-to-left, two-page spreads, and progress that follows you.</p>
+          <ul>
+            <li>Continue exactly where you left off</li>
+            <li>Import CBZ, PDF, and image files</li>
+            <li>Alerts when new chapters drop</li>
+          </ul>
+        </div>
+        <div class="shot reveal delay-2"><div class="phone"><img src="screens/reader.jpg" alt="Reading a chapter in MangaSpace"></div></div>
+      </div>
+
+      <div class="feature" style="--tint: rgba(245,107,0,.28)">
+        <div class="copy reveal">
+          <span class="icon-chip">🗓️</span>
+          <h3>Never miss a release</h3>
+          <p>See when the next English volume of every series comes out, and get a reminder before release day.</p>
+          <ul>
+            <li>Upcoming volumes grouped by month</li>
+            <li>Reminders on release day or ahead of time</li>
+            <li>A home screen widget for what’s coming</li>
+          </ul>
+        </div>
+        <div class="shot reveal delay-2"><div class="phone"><img src="screens/upcoming.jpg" alt="Upcoming English volume releases"></div></div>
+      </div>
+
+      <div class="feature" style="--tint: rgba(91,33,182,.45)">
+        <div class="copy reveal">
+          <span class="icon-chip">🌌</span>
+          <h3>Your library as a galaxy</h3>
+          <p>Every series becomes a star, grouped into constellations by genre. The more you read, the brighter it shines.</p>
+          <ul>
+            <li>Pinch, pan, and fly to any star</li>
+            <li>Planets orbit for every volume you’ve read</li>
+            <li>Share your galaxy as a story card</li>
+          </ul>
+        </div>
+        <div class="shot reveal delay-2"><div class="phone"><img src="screens/galaxy.jpg" alt="A library shown as a galaxy of constellations"></div></div>
+      </div>
+
+      <div class="feature" style="--tint: rgba(59,130,246,.32)">
+        <div class="copy reveal">
+          <span class="icon-chip">💬</span>
+          <h3>Talk manga with readers</h3>
+          <p>Rate and review series, start discussions about the latest chapter, and find your next favorite from people who love manga too.</p>
+          <ul>
+            <li>Reviews with spoiler shields</li>
+            <li>Chapter discussions and comments</li>
+            <li>Earn ranks from Cadet to Captain of the Fleet</li>
+          </ul>
+        </div>
+        <div class="shot reveal delay-2"><div class="phone"><img src="screens/community.jpg" alt="Community reviews for a series"></div></div>
+      </div>
+
+      <div class="grid">
+        <div class="tile reveal"><div class="emoji">🔎</div><h4>Discover</h4><p>Browse popular, top-rated, and new series by genre.</p></div>
+        <div class="tile reveal delay-1"><div class="emoji">🚀</div><h4>Reading streaks</h4><p>Watch your rocket climb higher every day you read.</p></div>
+        <div class="tile reveal delay-2"><div class="emoji">✨</div><h4>Year in Manga</h4><p>A shareable recap of everything you read this year.</p></div>
+        <div class="tile reveal delay-3"><div class="emoji">🔒</div><h4>Private by design</h4><p>No ads, no tracking. Your library stays in your iCloud.</p></div>
+      </div>
+    </section>
+
+    <div id="gallery" class="gallery" aria-label="App screenshots">
+      <div class="track">
+        <div class="phone"><img src="screens/library.jpg" alt="Library"></div>
+        <div class="phone"><img src="screens/series.jpg" alt="Series page"></div>
+        <div class="phone"><img src="screens/reader.jpg" alt="Reader"></div>
+        <div class="phone"><img src="screens/discover.jpg" alt="Discover"></div>
+        <div class="phone"><img src="screens/galaxy.jpg" alt="Your Galaxy"></div>
+        <div class="phone"><img src="screens/community.jpg" alt="Reviews"></div>
+        <div class="phone"><img src="screens/reading.jpg" alt="Reading"></div>
+        <div class="phone"><img src="screens/profile.jpg" alt="Profile"></div>
+        <div class="phone"><img src="screens/recap.jpg" alt="Year in Manga"></div>
+      </div>
+    </div>
+
+    <section class="final">
+      <div class="card reveal">
+        <img class="icon" src="icon.png" alt="">
+        <h2>Launch your collection.</h2>
+        <p>Free on iPhone. Add your first series in seconds and watch your manga universe grow.</p>
+        <a href="https://apps.apple.com/app/id6817181804" aria-label="Download on the App Store">
+          <img src="https://tools.applemarketingtools.com/api/badges/download-on-the-app-store/white/en-us?size=250x83" alt="Download on the App Store" style="height:54px; margin: 0 auto">
+        </a>
+      </div>
+    </section>
   </main>
-  <footer>© 2026 Billy Meli</footer>
+
+  <footer>
+    <span>© 2026 Billy Meli · Series data from MangaDex</span>
+    <nav>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </nav>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
